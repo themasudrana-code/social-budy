@@ -2,11 +2,11 @@
     margin:auto;
 }
 .comment-content{
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .1);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 6px;
     margin-top: 20px;
-    width: 1020px;
+    width: 60%;
 }
 .comment-img{
     width: 200px;
@@ -15,7 +15,7 @@
 .comment-img img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50px;
     
 }
 .comment-info{

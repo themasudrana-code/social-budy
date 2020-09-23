@@ -17,14 +17,15 @@ const ShowPost = (props) => {
     const useStyles = makeStyles({
         root: {
           height:'380px',
-          margin:'20px 10px',
-          boxShadow: '5px 5px 10px grey',
+          margin:'30px',
+          boxShadow: '3px 5px 15px rgba(0,0,0,.1)',
           textAlign:'justify',
+          padding: '20px'
           
         },
         title: {
           fontSize: 14,
-          color:'#3F51B5',
+          color:'#ff2d67',
           textAlign:'center',
           margin:'10px 0px'
         },
@@ -50,7 +51,7 @@ const ShowPost = (props) => {
               </CardContent>
               <CardActions>
                 <Link className='post-btn' to ={`/post/${id}`}>
-                      <Button variant="contained" color="primary" > READ MORE</Button>
+                      <Button variant="contained" color="secondary" > READ MORE</Button>
                 </Link>
                 
               </CardActions>

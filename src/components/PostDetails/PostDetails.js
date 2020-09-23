@@ -2,46 +2,44 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import { Link } from 'react-router-dom';
 import './PostDetails.css'
 
 const PostDetails = () => {
     const {ShowDetails} = useParams();
     const [singlePost, setSinglePost] = useState({})
     const [comment, setComment] = useState([]);
-    const {id, userId, title, body } = singlePost;
+    const {userId, title, body } = singlePost;
     
     useEffect(()=>{
         const api =`https://jsonplaceholder.typicode.com/posts/${ShowDetails}`;
         fetch(api)
         .then(res => res.json())
         .then(data => setSinglePost(data))
-    },[])
+    },)
 
         useEffect(() => {
             const url = `https://jsonplaceholder.typicode.com/comments?postId=${ShowDetails}`;
             fetch(url)
                 .then(res => res.json())
                 .then(data => setComment(data))
-    }, []);
+    },);
 //card part
     const useStyles = makeStyles({
         root: {
           height:'300px',
           margin:'20px 10px',
-          boxShadow: '5px 5px 10px grey',
+          boxShadow: '3px 6px 15px #e2e2e2',
           textAlign:'center',
           padding:'30px',
+          background: 'yellow'
         },
         title: {
-          fontSize: 14,
-          color:'#424242',
+          fontSize: '14px',
+          color:'#000',
           textAlign:'center',
           margin:'10px 0px',
           marginBottom:'20px'

@@ -1,21 +1,23 @@
 .mein_menu{
-    background:rgba(9, 9, 139, 0.815);
+    background:#444;
 }
-.mein_menu ul{
-    
-}
-.mein_menu ul li{
-    width: 33%;
-    display: inline-block;
-    border: 1px solid #333333;
-    text-align: center;
-    list-style: none;
-    padding: 10px;
-    cursor: pointer;
-}
-.mein_menu ul li a{
-    text-decoration: none;
-    font-size: 20px;
+nav.mein_menu ul li a {
     color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+    transition: .2s;
+    padding: 10px;
+}
+nav.mein_menu ul li a:hover {
+    color: rgb(5, 5, 5);
+    line-height: 50px;
+    background: #ff2d67;
     
+}
+nav.mein_menu ul li {
+    list-style: none;
+}
+nav.mein_menu ul {
+    display: flex;
+    justify-content: space-around;
 }
